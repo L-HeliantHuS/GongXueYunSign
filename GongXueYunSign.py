@@ -94,6 +94,10 @@ def pushServer(t):
             "title": f"{stateDesp}打卡成功 {t}",
         })
 
+# LogInFile
+def LogInFile():
+    with open("GongXueYunSign.log", "a+") as fp:
+        fp.write(f"[{phone}]{stateDesp}打卡成功. - {time.asctime(time.localtime(time.time()))}")
 
 # main 主函数
 def main():
@@ -105,8 +109,10 @@ def main():
 
     result = savePlan(headers)
     if result['code'] == 200:
+        LogInFile()
         # Server酱通知
         pushServer(result['data']['createTime'])
+
 
 
 if __name__ == '__main__':
