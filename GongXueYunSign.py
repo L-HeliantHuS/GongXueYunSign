@@ -97,7 +97,7 @@ def pushServer(t):
 # LogInFile
 def LogInFile():
     with open("GongXueYunSign.log", "a+") as fp:
-        fp.write(f"[{phone}]{stateDesp}打卡成功. - {time.asctime(time.localtime(time.time()))}")
+        fp.write(f"[{phone}]{stateDesp}打卡成功. - {time.asctime(time.localtime(time.time()))}\n")
 
 # main 主函数
 def main():
