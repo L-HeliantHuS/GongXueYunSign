@@ -1,4 +1,5 @@
 # -*- coding: utf8 -*-
+import random
 import sys
 
 import requests
@@ -116,4 +117,9 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        if sys.argv[2] is not None:
+            time.sleep(random.randint(60, 600))
+            main()
+    except:
+        main()

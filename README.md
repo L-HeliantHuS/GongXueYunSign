@@ -24,6 +24,13 @@ python3 GongXueYunSign.py END
 ```
 这样也就是工作日早上8:28上班打卡，下午5:31下班打卡.
 
+## 随机时间
+```
+28 8 * * 1,2,3,4,5 cd ~/GongXueYun && python3 GongXueYunSign.py START 1
+31 17 * * 1,2,3,4,5 cd ~/GongXueYun && python3 GongXueYunSign.py END 1
+```
+在动作后面跟上随便一个参数，脚本即在1分钟到10分钟的范围内随机延迟执行签到。
+
 ## 借鉴
 - [https://github.com/laradocs/moguding-solution](https://github.com/laradocs/moguding-solution)
 - [https://github.com/laradocs/php-moguding-sdk](https://github.com/laradocs/php-moguding-sdk)
